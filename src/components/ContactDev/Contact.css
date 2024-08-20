@@ -1,0 +1,230 @@
+.home-contact-button {
+    max-width: 97%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 1.2vw;
+}
+
+.why-me {
+    display: flex;
+    flex-direction: row;
+    margin: 5vw 0 0 0;
+    padding: 0 10vw;
+    gap: 3%;
+    align-items: center;
+    /* background-color: pink; */
+    align-items: flex-start;
+}
+
+.my-image-container {
+    /* margin-left: 5%; */
+    width: 65vw;
+    /* max-height: 300px; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.myImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: scale(1);
+}
+
+.why-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;;
+    gap: 4vw;
+}
+
+.text1 {
+    font-weight: bold;
+    font-size: 2.5vw;
+    padding: 0;
+    margin: 0;
+}
+
+.text2 {
+    /* margin-top: 10%; */
+    font-size: 1.2vw;
+}
+
+.m-form {
+    display: none;
+}
+
+:root {
+    --gradient: linear-gradient(45deg, #f8f8f8, #ebebeb, #d4d4d4, #c7c7c7, #bdbdbd);
+}
+
+.con {
+    background-image: var(--gradient);
+    background-size: 300%;
+    background-position: left;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 8%;
+    height: 15vw;
+    animation: bg-animation 3s infinite alternate;
+}
+
+@keyframes bg-animation {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
+.header-name {
+    color: rgb(0, 0, 0);
+    font-size: 3vw;
+    margin: 0;
+}
+
+.header-name>p {
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    transform: scaleY(2);
+}
+
+.line01 {
+    border-left: 3px solid rgb(0, 0, 0);
+    height: 12vw;
+    /* margin: 0 3px; */
+}
+
+.details-me {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.st-address, .ph-no, .mail-id {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+    font-size: 1.3vw;
+}
+
+@media only screen and (max-width: 576px) {
+    .why-me {
+        /* margin: 20px 10% 0 10%; */
+        display: flex;
+        flex-direction: column;
+        gap: 12vw;
+        align-items: center;
+        /* background-color: pink; */
+        padding: 0;
+    }
+
+    .my-image-container {
+        width: 40vw;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        /* border: 2px solid black; */
+    }
+    
+    .myImage {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        transform: scale(1);
+    }
+
+    .why-text {
+        display: flex;
+        flex-direction: column;
+        gap: 8vw;
+    }
+
+    .text1 {
+        font-size: 8vw;
+    }
+
+    .text2 {
+        margin: 0 5vw 0 5vw;
+        max-width: 100%;
+        padding: 0;
+        font-size: 4vw;
+    }
+
+    .m-form {
+        margin: 100px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 0 8vw 0 8vw;
+        gap: 5vw;
+        align-items: center;
+    }
+
+    .m-form>:nth-child(1) {
+        font-size: 7vw;
+    }
+
+    .m-form1 {
+        display: flex;
+        flex-direction: column;
+        gap: 8vw;
+        align-items: center;
+    }
+
+    .m-sub-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20vw;
+        height: 10vw;
+        border-radius: 30px;
+        border: 1px solid black;
+        color: rgb(0, 0, 0);
+        font-size: 4vw;
+        text-decoration: none;
+        font-weight: bold;
+        background: linear-gradient(rgb(255, 196, 0), rgb(255, 174, 0));
+        box-shadow: 0px 0px 5px 0px rgba(223, 107, 12, 0.74);
+    }
+
+    .con {
+        margin-top: 15vw;
+        height: 25vw;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    @keyframes bg-animation {
+        0% {background-position: left;}
+        100% {background-position: right;}
+    }
+    
+    .header-name, .line01 {
+        display: none;
+    }
+    
+    .details-me {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5vw;
+    }
+    
+    .st-address, .ph-no, .mail-id {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        font-weight: bold;
+        font-size: 3vw;
+    }
+}

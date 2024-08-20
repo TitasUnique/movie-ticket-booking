@@ -1,0 +1,153 @@
+.trailer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  /* height: 100vh; */
+  height: 46vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.video-trailer {
+  position: absolute;
+  width: 100%;
+  height: 100vw;
+  pointer-events: none;
+}
+
+.main-book {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.9));
+  width: 100%;
+  /* height: 100vh; */
+  height: 46vw;
+  color: white;
+  z-index: 10;
+  /* border: 2px solid black; */
+}
+
+.book-left {
+  margin-left: 10vw;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 2vw;
+}
+
+.poster {
+  margin-top: 6vw;
+  display: flex;
+  width: 18%;
+}
+
+.poster img {
+  width: 9vw;
+  height: 13vw;
+  border-radius: 10px;
+}
+
+.details span {
+  font-size: 1.5vw;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.ratings {
+  background: yellow;
+  width: 11%;
+  border-radius: 50px;
+  /* padding-left: 1vw; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ratings span {
+  font-weight: bold;
+  font-size: 2vw;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.ratings span i {
+  font-size: 1.2vw;
+}
+
+.book-right {
+  padding-top: 2vw;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+}
+
+.home-button-div {
+  display: flex;
+  width: 90%;
+  justify-content: flex-end;
+}
+
+.timming {
+  margin-top: 3vw;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.5vw;
+}
+
+.screen-image {
+  margin-top: 3vw;
+  transform: scale(1);
+  height: 7vw;
+  width: 10vw;
+}
+
+.booked-seat {
+  background-color: rgb(168 43 43 / 36%);
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.available-seat {
+  background-color: rgb(121 234 105 / 36%);
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.available-select-seat {
+  background-color: rgb(121 234 105 / 36%);
+  border: 1px solid black;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.select-seat {
+  background-color: rgba(52, 241, 27, 0.884);
+}
+
+.booked-seat:hover , .available-seat:hover {
+  cursor: pointer;
+}
+
+.booked-seat:hover {
+  background-color: rgba(202, 42, 42, 0.6);
+}
+
+.available-seat:hover {
+  background-color: rgba(76, 215, 58, 0.6);
+}
+
+.seat-image {
+  height: 1.3vw;
+  width: 1.3vw;
+}
