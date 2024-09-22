@@ -21,15 +21,16 @@ const BookTicket = () => {
 
   const handelclick = () => {
     if (SeatSelectState){
-      {
-        BookedSeats.map((row) => {
-          {
-            row.map((cell) => (
-              cell.seatId === SeatSelectState ? cell.booked = true : cell.booked = cell.booked
-            ))
-          }
-        })
-      }
+        BookedSeats.map((row) => (
+            row.map((cell) => {
+              if(cell.seatId === SeatSelectState){
+                cell.booked = true;
+              }
+              return cell;
+            })
+            //   cell.seatId === SeatSelectState ? cell.booked = true : cell.booked = cell.booked
+            // ))
+        ))
       dispatch({
         type: "seatBookdetails",
         payload: BookedSeats
@@ -71,7 +72,7 @@ const BookTicket = () => {
     <>
       <div className="trailer">
         {/* {trailer ? <video className='video-trailer' autoPlay muted loop><source src={trailer} type="video/mp4" />Your browser does not support the video tag.</video> : <span>No trailer data</span>} */}
-        {trailer ? <iframe className='video-trailer' src={trailer} >Your browser does not support the video tag.</iframe> : <span>No trailer data</span>}
+        {trailer ? <iframe title='unique' className='video-trailer' src={trailer} >Your browser does not support the video tag.</iframe> : <span>No trailer data</span>}
       </div>
       <div className="main-book">
         <div className="book-left animate__animated animate__bounceInDown">
@@ -85,18 +86,18 @@ const BookTicket = () => {
             <Button3 handelHomeClick={()=> handelHomeClickFunc()}/>
           </div>
           <div className="timming">{timming ? <span>You are booking for {timming}</span> : <span>no timming data</span>}</div>
-          <img className="screen-image" src={screen} alt="no image for screen" />
+          <img className="screen-image" src={screen} alt="#" />
           <div className="bookSeats">
             <table style={{ width: "100%", borderCollapse: "collapse" }}>
               <tbody>
                 {BookedSeats.map((row, rowIndex) => (
-                  <tr key={rowIndex}>
+                  <tr className='table-row' key={rowIndex}>
                     {row.map((cell, cellIndex) => (
                       <td key={cellIndex} className={cell.booked ? 'booked-seat' : cell.seatId === SeatSelectState ? 'available-select-seat select-seat' : 'available-seat'}
                         onClick={() => {
                           cell.booked ? showerror(cell.seatId) : handelCellclick(cell.seatId);
                         }}>
-                        <img className="seat-image" src={seat} alt="no seat image" />
+                        <img className="seat-image" src={seat} alt="#" />
                       </td>
                     ))}
                   </tr>

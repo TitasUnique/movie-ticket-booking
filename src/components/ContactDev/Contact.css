@@ -6,6 +6,12 @@
     margin-top: 1.2vw;
 }
 
+.main-con-elements {
+    display: flex;
+    flex-direction: column;
+    gap: 3.7vw;
+}
+
 .why-me {
     display: flex;
     flex-direction: row;

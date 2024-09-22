@@ -63,8 +63,14 @@ select {
   font-size: 1vw;
 }
 
+/* select:focus {
+  border-color: #007bff;
+  outline: none;
+} */
+
 option {
   color: black;
+  font-size: 1vw;
 }
 
 .btn {
